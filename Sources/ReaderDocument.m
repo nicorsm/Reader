@@ -71,7 +71,7 @@
 @synthesize password = _password;
 @synthesize filePath = _filePath;
 @dynamic fileName, fileURL;
-@dynamic canEmail, canExport, canPrint;
+//@dynamic canEmail, canExport, canPrint;
 
 #pragma mark - ReaderDocument class methods
 
@@ -255,21 +255,6 @@
 	if (_fileURL == nil) _fileURL = [[NSURL alloc] initFileURLWithPath:_filePath isDirectory:NO];
 
 	return _fileURL;
-}
-
-- (BOOL)canEmail
-{
-	return YES;
-}
-
-- (BOOL)canExport
-{
-	return YES;
-}
-
-- (BOOL)canPrint
-{
-	return YES;
 }
 
 - (BOOL)archiveDocumentProperties
